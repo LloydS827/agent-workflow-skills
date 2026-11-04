@@ -1,0 +1,6 @@
+interface:
+  display_name: "Init Notion Project"
+  short_description: "Create a Notion project framework before planning"
+  default_prompt: "Use $init-notion-project for the requested project workflow."
+policy:
+  allow_implicit_invocation: false

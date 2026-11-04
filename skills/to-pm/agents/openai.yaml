@@ -1,0 +1,6 @@
+interface:
+  display_name: "toPM"
+  short_description: "Manage Notion milestones, issues and execution feedback"
+  default_prompt: "Use $to-pm for the requested project workflow."
+policy:
+  allow_implicit_invocation: false

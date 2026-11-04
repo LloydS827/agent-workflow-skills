@@ -1,0 +1,5 @@
+interface:
+  display_name: "To Notion"
+  short_description: "Maintain internal plans and decisions in Notion"
+policy:
+  allow_implicit_invocation: false

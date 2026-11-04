@@ -1,0 +1,5 @@
+interface:
+  display_name: "Project Docs"
+  short_description: "Produce formal reports, slides, and budgets"
+policy:
+  allow_implicit_invocation: false
