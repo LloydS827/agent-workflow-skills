@@ -10,6 +10,8 @@ disable-model-invocation: true
 
 ## 1. 读取依据与目标页面
 
+需要读取或写入 Notion 时，先按[Notion MCP 检查](../_shared/record-writing.md#notion)核实当前会话的工具和目标页访问权。
+
 读取讨论、现有方案和相关证据；软件任务检查相关实现、测试、领域术语和 ADR，研究与系统任务检查已有结果及验证条件。
 
 读取 [记录写入](../_shared/record-writing.md) 的通用规则与 Notion 部分，定位并告知保存页面。位置未定时继续整理草案。项目已有主页时读取 [Notion 项目布局](../_shared/notion-project.md)，优先沿用现有分类与原文档；新增常用文档在主页分类直达正文，不建立空目录。

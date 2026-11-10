@@ -4,7 +4,7 @@
 
 按 [README 的安装说明](../README.md#安装)把技能装进目标项目，再在 Agent 中打开这个项目。试用修订版本时，确认选中的入口来自刚安装的目录。对于按路径读取的工具，用「读取 `team-skills/<技能名>/SKILL.md`」启动，相互调用的技能也从同一目录读取。下文给出的是技能名。
 
-只做需求澄清时可以直接使用 [grill-with-docs](../skills/grill-with-docs/SKILL.md)。需要跨会话推进多个相互依赖的决定时选 [wayfinder](../skills/wayfinder/SKILL.md)，提前明确目标工程的 tracker。需要写入 Notion 时准备项目名、目标父页或现有主页，以及有相应读写权限的连接器。
+只做需求澄清时可以直接使用 [grill-with-docs](../skills/grill-with-docs/SKILL.md)。需要跨会话推进多个相互依赖的决定时选 [wayfinder](../skills/wayfinder/SKILL.md)，提前明确目标工程的 tracker。要访问 Notion，先在 Agent 中启用 Notion 插件或配置 Notion MCP，并完成工作区授权。告诉 Agent 页面名称即可开始查找，有现成链接也可直接用。新项目优先使用你指定的父页，其次沿用当前业务项目的位置约定。
 
 ## 手动复制安装
 

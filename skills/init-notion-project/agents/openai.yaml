@@ -1,6 +1,6 @@
 interface:
-  display_name: "Init Notion Project"
-  short_description: "Create a Notion project framework before planning"
-  default_prompt: "Use $init-notion-project for the requested project workflow."
+  display_name: "初始化 Notion 项目主页"
+  short_description: "建立 Notion 项目主页，或补齐已有主页并返回链接"
+  default_prompt: "请用 $init-notion-project 为当前项目建立或补齐 Notion 主页，并返回主页链接。"
 policy:
   allow_implicit_invocation: false

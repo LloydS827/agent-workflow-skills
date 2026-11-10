@@ -10,6 +10,8 @@ disable-model-invocation: true
 
 ## 1. 读取来源与确定本次动作
 
+实际访问 Notion 前按[Notion MCP 检查](../_shared/record-writing.md#notion)核实会话工具，按本次任务检查页面、数据库或视图操作。
+
 读取当前方案、相关 Issues 全文、必要评论、已有进度及里程碑；按需核查实现、术语、ADR、测试或实验条件。区分首次拆解、方案调整、执行回写、阶段复盘。草案请求只交付草案。
 
 读取 [记录写入](../_shared/record-writing.md) 与 [Notion 项目布局](../_shared/notion-project.md)。定位并告知项目主页和实际数据库。缺少主页时先查项目约定；初始化是独立入口，不擅自另建项目。已有明确授权继续，影响目标或团队承诺的未决取舍集中提出。
