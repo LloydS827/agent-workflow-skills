@@ -1,5 +1,5 @@
 interface:
-  display_name: "Implement"
-  short_description: "Build work from a spec or tickets"
+  display_name: "按任务实现软件"
+  short_description: "从方案或原票领取指定范围，交付代码、测试结果与可复查的验收证据"
 policy:
   allow_implicit_invocation: false

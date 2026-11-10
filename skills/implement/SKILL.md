@@ -1,17 +1,20 @@
 ---
 name: implement
-description: "Implement a piece of work based on a spec or set of tickets."
+description: 按方案、Issue 或指定的票内步骤实现软件，交付代码、测试结果和可回到原任务的验收证据。
 disable-model-invocation: true
 ---
 
-Implement the work described by the user in the spec or tickets.
+# 按任务实现软件
 
-If the user passes a ticket reference, fetch it from the issue tracker and state its title before starting. If the reference is ambiguous, ask.
+接手用户交办的一项软件行为，按约定的接口实现、测试和审查。交办整个 Issue 时对照整票验收。只交办其中一个 ticket 时，交付该步骤的结果和整票尚缺的条件。
 
-Call the Skill tool with "tdd" where possible, at pre-agreed seams.
+## 执行流程
 
-Run typechecking regularly, single test files regularly, and the full test suite once at the end.
+1. **领取原任务。** 用户给了完整规格就从规格开工。收到票据时，有链接就读原票，只有编号则到业务项目约定的任务库查找。对于 `to-pm` 建立的 Issue，按 [Notion 访问约定](../_shared/record-writing.md#notion)核对票内步骤及关联的当前执行版。开工前报出原票编号和标题、受托范围及验收接口。若前置未就绪、编号匹配多张或关键输入缺失，指出具体缺口。
+2. **按验收条件实现。** 记下开工时的提交和已有工作区改动。在约定的公共接口上用 [tdd](../tdd/SKILL.md) 逐项复现缺失行为，观察测试失败，再实现到通过。复用已有的测试边界，新边界影响验收口径时先与用户确定。开发中运行相关测试和项目已有的类型检查，结束时运行完整测试套件。
+3. **审查本次变更。** 默认在当前分支仅提交本次实现与测试，用 [code-review](../code-review/SKILL.md) 从开工基点审查交付提交，提供原票或规格及本次委托范围。用户要求保留未提交改动时，按同样的仓库规范和需求两项标准直接审查相关暂存、未暂存及新增文件。修正影响交付的问题，复跑受影响的检查。
+4. **按原范围交回证据。** 报告原任务编号或规格位置、已实现的步骤、可复查的提交或文件、实际运行的检查和剩余验收项。团队 Notion 项目将这份结果交给 `to-pm`。用户一并交办回写时，按[原票进展约定](../to-pm/references/progress.md)读取最新记录、局部更新并回读。相同证据已经保存就复用。新发现改变范围或验收时，单列交给方案负责人决定。
 
-Once done, call the Skill tool with "code-review" to review the work.
+## 交接示例
 
-Commit your work to the current branch.
+一张导入任务要求先拒绝缺少必填列的文件，再生成逐行错误清单。本次只交办第一步。回报应指出对应的 Issue、可复查的提交，以及命令行测试中实际观察到的退出码和提示。逐行错误清单仍待实现，回写时只勾选第一步，整票保持进行中。

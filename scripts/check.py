@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPLICIT = {
-    "grill-with-docs", "handoff", "implement", "implement-spec",
+    "grill-with-docs", "handoff", "implement", "implement-all",
     "improve-codebase-architecture", "init-notion-project", "project-docs",
     "retro", "setup-matt-pocock-skills", "simplify", "teach", "to-notion",
     "to-pm", "triage", "wayfinder",

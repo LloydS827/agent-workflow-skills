@@ -24,6 +24,8 @@ to-notion 借鉴 to-spec 综合已有讨论的做法，to-pm 沿用 to-tickets �
 
 ## 后续修订
 
+V0.21 将上游 `implement-spec` 更名为本项目的 [implement-all](skills/implement-all/SKILL.md)，负责跨 Issue 调度与集成验收。[implement](skills/implement/SKILL.md) 承接单张 Issue 或其中一步。上表和导入快照保留上游原名。
+
 每项导入技能都在本项目内继续维护。中文化时保留作者与许可，记录翻译之外的行为变化；可用文件清单或上游固定版本回看修订前内容。项目自有内容的发行许可和公开发布方式另行确定。
 
 首次跨工具适配在五项自建技能的 `SKILL.md` 中补齐了 `disable-model-invocation: true`，使读取该字段的客户端也能沿用项目的显式调用约定。原始 SHA-256 清单保留作对照。安装脚本把上游许可随技能复制到目标的 `_shared/`。
