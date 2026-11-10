@@ -1,5 +1,5 @@
 interface:
-  display_name: "Project Docs"
-  short_description: "Produce formal reports, slides, and budgets"
+  display_name: "制作正式项目材料"
+  short_description: "制作收件人可独立阅读的正式方案、报告或预算，核对证据与最终呈现"
 policy:
   allow_implicit_invocation: false

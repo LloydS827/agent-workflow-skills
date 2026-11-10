@@ -7,12 +7,12 @@
 | 澄清日常需求 | [grill-with-docs](../skills/grill-with-docs/SKILL.md) | 已决定的目标、术语、约束和未决问题 |
 | 跨会话梳理复杂问题 | [wayfinder](../skills/wayfinder/SKILL.md) | 决策地图及有依赖关系的子 Issue |
 | 为项目建立入口 | [init-notion-project](../skills/init-notion-project/SKILL.md) | Notion 项目主页和必要区域 |
-| 把共识写成方案 | [to-notion](../skills/to-notion/SKILL.md) | 含范围、依据和完成条件的原生正文 |
-| 判断哪些工作值得做 | [simplify](../skills/simplify/SKILL.md) | 写回同一方案的删减、复用、保留或延后决定 |
-| 安排执行、回写反馈 | [to-pm](../skills/to-pm/SKILL.md) | 里程碑、Issues、依赖、内部 tickets 与进展 |
+| 把共识写成方案 | [to-notion](../skills/to-notion/SKILL.md) | 可供简化的候选方案，或已回读的项目证据记录 |
+| 判断哪些工作值得做 | [simplify](../skills/simplify/SKILL.md) | 只审查时给建议；定稿时给出本轮可执行范围与验收条件 |
+| 拆解或调整执行安排、回写进展、复盘阶段 | [to-pm](../skills/to-pm/SKILL.md) | 从简化定稿拆出的 Issue 与 ticket、原任务反馈或阶段结论 |
 | 实现软件行为 | [implement](../skills/implement/SKILL.md) | 实现、测试、代码审查与提交 |
 | 调查技术问题 | [research](../skills/research/SKILL.md) | 带一手来源的研究记录 |
-| 交付报告、汇报或预算 | [project-docs](../skills/project-docs/SKILL.md) | 按受众和格式制作、检查过的材料 |
+| 交付报告、汇报或预算 | [project-docs](../skills/project-docs/SKILL.md) | 外部读者可独立使用、按指定格式检查过的材料 |
 
 **补充入口与支撑技能**
 

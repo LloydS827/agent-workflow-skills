@@ -18,7 +18,7 @@
 
 2026-10-30 建立项目目录时参考的上游 README 和 CONTRIBUTING.md 的 Git blob 分别为 `f7038f139299985eea6c3e18398dbafb379a0010` 和 `5895f1e8ac654a9c477243b187cbe901cd614d72`。技能源码采用上表所列的固定版本。
 
-to-notion 借鉴 to-spec 综合已有讨论的做法，to-pm 沿用 to-tickets 按成果拆分任务的思路。simplify 检查删除一项工作后复杂度去了哪里，project-docs 承接维护者原有的正式材料方法。to-spec 和 to-tickets 在这里是设计出处；当前主流程通过 to-notion 和 to-pm 运行。原型、测试、审查与研究等实际调用的支撑技能已随项目收录。
+to-notion 借鉴 to-spec 综合已有讨论的做法，to-pm 沿用 to-tickets 按成果拆分任务的思路。simplify 检查删除一项工作后复杂度去了哪里，project-docs 合并了维护者原有 formal-project-docs 的工作方法和审校清单，涵盖正式行文、预算口径、跨文件一致性、外部读者独立阅读与最终呈现检查。项目内统一从 project-docs 调用。to-spec 和 to-tickets 在这里是设计出处；当前主流程通过 to-notion 和 to-pm 运行。原型、测试、审查与研究等实际调用的支撑技能已随项目收录。
 
 旧入口 to-linear 在个人工作流中已退役，历史设计由 to-pm 的设计说明承接。文档、演示文稿、表格和 PDF 制作能力，以及 Notion 连接器等，由目标运行环境提供。
 

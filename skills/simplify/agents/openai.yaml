@@ -1,5 +1,5 @@
 interface:
-  display_name: "Simplify"
-  short_description: "Reduce plans to the work that earns its cost"
+  display_name: "简化方案"
+  short_description: "审查取舍与验收条件，在原方案页确定本轮可交给执行团队的范围"
 policy:
   allow_implicit_invocation: false
