@@ -11,12 +11,12 @@ ROOT = Path(__file__).resolve().parents[1]
 EXPLICIT = {
     "grill-with-docs", "handoff", "implement", "implement-all",
     "improve-codebase-architecture", "init-notion-project", "project-docs",
-    "retro", "setup-matt-pocock-skills", "simplify", "teach", "to-notion",
+    "retro", "setup-matt-pocock-skills", "simplify", "skill-builder", "teach", "to-notion",
     "to-pm", "triage", "wayfinder",
 }
 IMPLICIT = {
     "code-review", "codebase-design", "diagnosing-bugs", "domain-modeling",
-    "grilling", "prototype", "research", "tdd", "writing-for-agents",
+    "grilling", "paper-assistant", "prototype", "research", "tdd", "writing-for-agents",
 }
 EXPECTED = EXPLICIT | IMPLICIT
 
@@ -43,7 +43,12 @@ def check(root):
     skills = {p.parent.name: p for p in (root / "skills").glob("*/SKILL.md")}
     catalog = (root / "docs/skills.md").read_text(encoding="utf-8")
     indexed = set(re.findall(r"\]\(\.\./skills/([^/]+)/SKILL\.md\)", catalog))
-    for label, names in (("skill directories", set(skills)), ("documented skill index", indexed)):
+    readme = (root / "README.md").read_text(encoding="utf-8")
+    heading = f"## 全部 {len(EXPECTED)} 项技能"
+    catalog_section = readme.partition(heading + "\n")[2].split("\n## ", 1)[0]
+    readme_names = set(re.findall(r"\]\(skills/([^/]+)/SKILL\.md\)", catalog_section))
+    for label, names in (("skill directories", set(skills)), ("documented skill index", indexed),
+                         ("README catalog", readme_names)):
         if names != EXPECTED:
             errors.append(f"{label}: missing {sorted(EXPECTED - names)}, unexpected {sorted(names - EXPECTED)}")
 
@@ -68,8 +73,10 @@ def check(root):
             errors.append(f"{name}: missing {metadata.name}")
             continue
         yaml = metadata.read_text(encoding="utf-8")
-        if not re.search(r"^interface:\s*\n[ \t]+display_name:\s*\S", yaml, re.M):
-            errors.append(f"{name}: missing interface metadata")
+        interface = re.search(r"^interface:[ \t]*\n((?:[ \t]+[^\n]*\n?)*)", yaml, re.M)
+        display_name = rf"""^[ \t]+display_name:[ \t]*(["']?){re.escape(name)}\1[ \t]*$"""
+        if not interface or not re.search(display_name, interface[1], re.M):
+            errors.append(f"{name}: interface.display_name must match the invocation name")
         # An omitted policy opts into implicit invocation in the imported Codex format.
         policy = re.search(r"^policy:[ \t]*\n((?:[ \t]+[^\n]*\n?)*)", yaml, re.M)
         value = re.findall(r"^[ \t]+allow_implicit_invocation:[ \t]*(\S+)[ \t]*$", yaml, re.M)
@@ -127,6 +134,6 @@ if __name__ == "__main__":
         print("ERROR:", problem)
     if problems:
         sys.exit(1)
-    print(f"PASS: {len(EXPECTED)} skills, catalog, invocation policies, local links and privacy scan")
+    print(f"PASS: {len(EXPECTED)} skills, both catalogs, display names, invocation policies, local links and privacy scan")
     if args.baseline:
         print("PASS: imported skill files and upstream license match the SHA-256 manifest")

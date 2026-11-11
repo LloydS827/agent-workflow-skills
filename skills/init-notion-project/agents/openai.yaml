@@ -1,5 +1,5 @@
 interface:
-  display_name: "初始化 Notion 项目主页"
+  display_name: "init-notion-project"
   short_description: "建立 Notion 项目主页，或补齐已有主页并返回链接"
   default_prompt: "请用 $init-notion-project 为当前项目建立或补齐 Notion 主页，并返回主页链接。"
 policy:

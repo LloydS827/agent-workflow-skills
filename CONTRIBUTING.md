@@ -1,21 +1,21 @@
 # 参与与维护
 
-本项目以完整导入的工作流为起点，后续将全部技能逐项翻译、校订并定制。优先在原技能目录中修改，让调用者始终有一个明确入口。当前使用方法见 [README](README.md)，原始版本见[来源说明](SOURCES.md)。
+本项目以完整导入的工作流为起点，逐项按实际用途校订和定制。优先在原技能目录中修改，让调用者始终有一个明确入口。需要协助新建或修订技能时，可点名调用 [skill-builder](skills/skill-builder/SKILL.md)。当前使用方法见 [README](README.md)，原始版本见[来源说明](SOURCES.md)。
 
 ## 修订一项技能
 
 修订自建技能时，可从[Matt 原版技能调研](docs/matt-skill-design.md)查到相应的上游实例，以及团队在 Notion 和材料交付上的设计取舍。
 
-修订有执行流程的技能时，开头用一小段说明何时使用、交付什么。接着用「执行流程」列出具体步骤，把影响行动的判断放在对应步骤。产物模板、最小样例和补充说明放在流程之后，由需要它们的步骤引用。
+编写或修订 `SKILL.md` 时，写法见 [skill-builder 的执行流程](skills/skill-builder/SKILL.md#执行流程)第 3 步。
 
 1. 从[技能目录](docs/skills.md)确定它承接的任务，阅读其 `SKILL.md`、配套参考、脚本和 `agents/openai.yaml`。涉及上下游交接时查阅[工作流设计](docs/workflow.md)；涉及五项自建技能时对照[原设计与验收场景](docs/custom-skill-design.md)。
-2. 将给人和 Agent 阅读的说明、提示、示例与界面文字译为自然中文；校订已有中文。保留安装名、命令、路径、元数据键和外部系统字段。明确区分措辞调整与有意改变的行为，尤其是调用时机、输出位置和完成条件。
+2. 按使用者需要中文化入口、说明或示例，已有内容能满足用途时可保留原文。保留安装名、命令、路径、元数据键和外部系统字段。明确区分措辞调整与有意改变的行为，尤其是调用时机、输出位置和完成条件。
 3. 用同一份具体输入对照修订前后行为。记录触发方式、实际产出、是否满足完成条件、仍需人工处理的步骤。涉及记录写入时检查重复调用和部分成功后的恢复；涉及交付文件时检查最终呈现。
 4. 如果输入、产出、依赖或步骤变化，同步修订使用说明及相关示例。保留上游归属与许可，导入清单作为历史对照保存。
 
 ## 检查改动
 
-运行 `python3 scripts/check.py` 检查当前技能目录、调用配置和项目内引用。新增或移除入口时，同步 技能目录文档与检查脚本中的显式或隐式技能清单。仅由人启动的技能同时在 `SKILL.md` 中设置 `disable-model-invocation: true`，在 `agents/openai.yaml` 中设置 `policy.allow_implicit_invocation: false`。
+运行 `python3 scripts/check.py` 检查技能目录、调用配置和项目内引用。Codex 的 `interface.display_name` 与英文调用名保持一致。新增或移除入口时，同步 README、技能目录文档和检查脚本的清单。仅由人启动的技能同时在 `SKILL.md` 中设置 `disable-model-invocation: true`，在 `agents/openai.yaml` 中设置 `policy.allow_implicit_invocation: false`。
 
 用 README 的安装命令把当前工作副本装进临时业务项目，加 `--check` 核对文件，再从该项目实际调用受影响的技能。需要对照原始导入快照时运行 `python3 scripts/check.py --baseline`；这会列出从导入至今的差异，包括已记录的跨工具适配。
 

@@ -1,5 +1,5 @@
 interface:
-  display_name: "实施整份软件方案"
+  display_name: "implement-all"
   short_description: "从原票和项目证据判断依赖，协调并行实现并验收整份方案"
 policy:
   allow_implicit_invocation: false

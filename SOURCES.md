@@ -24,6 +24,8 @@ to-notion 借鉴 to-spec 综合已有讨论的做法，to-pm 沿用 to-tickets �
 
 ## 后续修订
 
+V0.22 新增两项团队自建技能。[skill-builder](skills/skill-builder/SKILL.md) 来自团队修订及试用技能的实践；[paper-assistant](skills/paper-assistant/SKILL.md) 来自团队根据 Andrej Karpathy 阅读法整理的论文陪读流程。本版统一以英文调用名作为 Codex 显示名，并支持沿用已有 Notion 项目的版式与看板设置。
+
 V0.21 将上游 `implement-spec` 更名为本项目的 [implement-all](skills/implement-all/SKILL.md)，负责跨 Issue 调度与集成验收。[implement](skills/implement/SKILL.md) 承接单张 Issue 或其中一步。上表和导入快照保留上游原名。
 
 每项导入技能都在本项目内继续维护。中文化时保留作者与许可，记录翻译之外的行为变化；可用文件清单或上游固定版本回看修订前内容。项目自有内容的发行许可和公开发布方式另行确定。

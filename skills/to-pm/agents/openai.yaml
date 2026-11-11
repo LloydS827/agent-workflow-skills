@@ -1,5 +1,5 @@
 interface:
-  display_name: "执行安排与进展（toPM）"
+  display_name: "to-pm"
   short_description: "从已简化的执行方案拆出可领取的 Issue 和 ticket，或回写执行反馈"
   default_prompt: "请用 $to-pm 将本项目经 simplify 定稿的执行方案拆成可领取的 Issue 和 ticket，并指出可以先做哪项。"
 policy:

@@ -1,0 +1,5 @@
+interface:
+  display_name: "skill-builder"
+  short_description: "根据实践经验或固定需求创建技能，或修订已有技能并用具体任务检验效果"
+policy:
+  allow_implicit_invocation: false

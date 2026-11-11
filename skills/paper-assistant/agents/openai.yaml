@@ -1,0 +1,3 @@
+interface:
+  display_name: "paper-assistant"
+  short_description: "陪读指定论文，讲解关键推导和证据，主持讨论并续写同一份阅读笔记"

@@ -1,5 +1,5 @@
 interface:
-  display_name: "编写项目方案"
+  display_name: "to-notion"
   short_description: "将共识和证据存入原方案页，标明待简化范围与现行执行版"
 policy:
   allow_implicit_invocation: false

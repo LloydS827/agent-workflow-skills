@@ -14,7 +14,7 @@
 
 | 工具 | 调用方法与目录依据 |
 | --- | --- |
-| Codex | 在 CLI 输入 `$` 选择技能；同名时选择来自业务项目的版本。[官方说明](https://learn.chatgpt.com/docs/build-skills) |
+| Codex | 输入 `$` 后按英文调用名选择技能，例如 `$paper-assistant`。同名时选择来自业务项目的版本。[官方说明](https://learn.chatgpt.com/docs/build-skills) |
 | WorkBuddy | 在本地项目会话中点名技能。自动发现仍需在桌面端验证，找不到时直接要求读取 `.codebuddy/skills/to-notion/SKILL.md`。[项目配置说明](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Project) |
 | DeepSeek Harness | 输入 `/to-notion`。Git 项目安装到仓库根目录，支持 `.dsh/skills/` 与 `.agents/skills/`。[目录规则](https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/skill/skill-filesystem/README.md) · [调用方式](https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/skill/tool-skill/README.md) |
 | 其他文件型 Agent | 要求读取 `team-skills/to-notion/SKILL.md` 并依照说明执行，配套技能与共享参考也从同一目录读取。 |

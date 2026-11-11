@@ -1,6 +1,6 @@
-# Agent Workflow Skills · V0.21
+# Agent Workflow Skills · V0.22
 
-一套从需求讨论走到交付验收的研发工作流，可直接安装到团队项目。仓库收录 5 项团队自建技能和 19 项来自 Matt Pocock 的技能，共 24 项。
+一套从需求讨论走到交付验收的研发工作流，可直接安装到团队项目。V0.22 收录 26 项技能，其中 7 项由团队自建，19 项源自 Matt Pocock。
 
 ## 主流程
 
@@ -18,18 +18,18 @@
 
 ### 本团队的 Notion 约定
 
-团队用 Notion 对接方案、里程碑和 Issues。代码、数据与实验日志保留在原位置，由项目页引用。实际读写需要在 Agent 中接入并授权 Notion MCP。新建项目优先使用用户指定的父页，其次沿用业务项目的约定，两者都没有时再询问。本团队约定的父页叫「项目总览」。其他团队可替换存档平台，按相同的交付物衔接各步。[Notion 接入说明](https://developers.notion.com/guides/mcp/get-started-with-mcp) · [共享写入约定](skills/_shared/record-writing.md)
+团队用 Notion 对接方案、里程碑和 Issues。代码、数据与实验日志保留在原位置，由项目页引用。实际读写需要在 Agent 中接入并授权 Notion MCP。新建项目优先使用用户指定的父页，其次沿用业务项目的约定，两者都没有时再询问。本团队约定的父页叫「项目总览」。新主页可参考已有项目或指定模板的排版，初始化时把看板偏好记在占位处，供 `to-pm` 建库时使用。其他团队可替换存档平台，按相同的交付物衔接各步。[Notion 接入说明](https://developers.notion.com/guides/mcp/get-started-with-mcp) · [共享写入约定](skills/_shared/record-writing.md)
 
 ## 安装
 
 **交给 Agent 安装**时，在 Codex、WorkBuddy、DeepSeek Harness 等工具中打开业务项目，发送以下请求。
 
-> 请从 https://github.com/LloydS827/agent-workflow-skills 安装 v0.21 的全部技能到当前项目。按 README 选择本工具的目录，运行安装脚本，再用 --check 核对。保留已有的不同内容，完成后告诉我怎样调用。
+> 请从 https://github.com/LloydS827/agent-workflow-skills 安装 v0.22 的全部技能到当前项目。按 README 选择本工具的目录，运行安装脚本，再用 --check 核对。保留已有的不同内容，完成后告诉我怎样调用。
 
 **自行安装**需要 Git 和 Python 3。下面是 Codex 的安装命令，请将路径换成自己的业务项目。其他工具按表替换技能目录。
 
 ```sh
-git clone --branch v0.21 https://github.com/LloydS827/agent-workflow-skills.git
+git clone --branch v0.22 https://github.com/LloydS827/agent-workflow-skills.git
 cd agent-workflow-skills
 python3 scripts/install.py "/path/to/project/.agents/skills"
 python3 scripts/install.py "/path/to/project/.agents/skills" --check
@@ -56,7 +56,9 @@ Windows 可用 `py -3`。安装脚本会复制共享参考和上游许可，遇�
 
 [会议待办收集示例](examples/meeting-actions.md) · [完整工作流设计](docs/workflow.md)
 
-## 全部 24 项技能
+## 全部 26 项技能
+
+Codex 中的显示名与下表的英文调用名一致。输入 `$` 后选名称，或直接写 `$init-notion-project`。
 
 | 用途 | 技能与作用 |
 | --- | --- |
@@ -64,7 +66,7 @@ Windows 可用 `py -3`。安装脚本会复制共享参考和上游许可，遇�
 | 项目与交付 | [init-notion-project](skills/init-notion-project/SKILL.md) 建项目主页 · [to-notion](skills/to-notion/SKILL.md) 写方案与结论 · [simplify](skills/simplify/SKILL.md) 删减范围并定稿 · [to-pm](skills/to-pm/SKILL.md) 拆票与回写 · [project-docs](skills/project-docs/SKILL.md) 制作和检查正式材料 |
 | 实现与验证 | [implement](skills/implement/SKILL.md) 按交办范围实现软件 · [implement-all](skills/implement-all/SKILL.md) 按依赖组织整份规格的多任务实现 · [tdd](skills/tdd/SKILL.md) 用行为测试驱动实现 · [code-review](skills/code-review/SKILL.md) 按规范和需求审查变更 · [diagnosing-bugs](skills/diagnosing-bugs/SKILL.md) 诊断故障与性能退化 |
 | 调研与设计 | [research](skills/research/SKILL.md) 查一手来源，留下带引用的研究笔记 · [prototype](skills/prototype/SKILL.md) 用原型检验设计 · [codebase-design](skills/codebase-design/SKILL.md) 推敲模块边界 · [improve-codebase-architecture](skills/improve-codebase-architecture/SKILL.md) 寻找架构改进点 |
-| 协作与学习 | [triage](skills/triage/SKILL.md) 分类和核实待办请求 · [handoff](skills/handoff/SKILL.md) 交接会话 · [retro](skills/retro/SKILL.md) 复盘编码过程 · [teach](skills/teach/SKILL.md) 组织学习 |
-| 配置与维护 | [setup-matt-pocock-skills](skills/setup-matt-pocock-skills/SKILL.md) 配置工程任务跟踪与领域文档 · [writing-for-agents](skills/writing-for-agents/SKILL.md) 编写技能与 Agent 指令 |
+| 协作与学习 | [triage](skills/triage/SKILL.md) 分类和核实待办请求 · [handoff](skills/handoff/SKILL.md) 交接会话 · [retro](skills/retro/SKILL.md) 复盘编码过程 · [teach](skills/teach/SKILL.md) 组织学习 · [paper-assistant](skills/paper-assistant/SKILL.md) 陪读论文、讨论难点并续写阅读笔记 |
+| 配置与维护 | [skill-builder](skills/skill-builder/SKILL.md) 从经验或固定需求新建技能，试用并改进已有技能 · [setup-matt-pocock-skills](skills/setup-matt-pocock-skills/SKILL.md) 配置工程任务跟踪与领域文档 · [writing-for-agents](skills/writing-for-agents/SKILL.md) 编写技能与 Agent 指令 |
 
 [技能目录与产出](docs/skills.md) · [定制与贡献](CONTRIBUTING.md) · [来源与许可](SOURCES.md) · [验证记录](docs/validation.md)
