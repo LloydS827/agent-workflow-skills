@@ -1,0 +1,4 @@
+interface:
+  display_name: "ppt-creater"
+  short_description: "从资料与受众出发，规划叙事与分镜，完成视觉设计、可编辑制作和交付检查"
+  default_prompt: "使用 $ppt-creater，根据我的目的、资料和参考稿，完成 PPT 的规划、制作或修订，并检查内容、版式和可编辑性。"

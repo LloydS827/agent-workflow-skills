@@ -16,7 +16,7 @@ EXPLICIT = {
 }
 IMPLICIT = {
     "code-review", "codebase-design", "diagnosing-bugs", "domain-modeling",
-    "grilling", "paper-assistant", "prototype", "research", "tdd", "writing-for-agents",
+    "grilling", "paper-assistant", "ppt-creater", "prototype", "research", "tdd", "writing-for-agents",
 }
 EXPECTED = EXPLICIT | IMPLICIT
 

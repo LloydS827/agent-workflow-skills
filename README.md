@@ -1,6 +1,8 @@
-# Agent Workflow Skills · V0.22
+# Agent Workflow Skills · V0.23
 
-一套从需求讨论走到交付验收的研发工作流，可直接安装到团队项目。V0.22 收录 26 项技能，其中 7 项由团队自建，19 项源自 Matt Pocock。
+一套从需求讨论走到交付验收的研发工作流，可直接安装到团队项目。V0.23 收录 27 项技能，其中 8 项由团队自建，19 项源自 Matt Pocock。
+
+本版新增 [ppt-creater](skills/ppt-creater/SKILL.md)，从资料与受众出发完成演示稿的规划、叙事、视觉设计、可编辑制作和交付检查，也支持参考稿改版与手动编辑后的续改。
 
 ## 主流程
 
@@ -11,7 +13,7 @@
 | 3. 记录候选方案 | 用 `to-notion` 整理讨论、依据与待验证项 | 一份待简化的候选方案 |
 | 4. 简化并定稿 | 用 `simplify` 检查哪些工作可以取消、复用或延后 | 同一方案页上的执行版本、保留范围和验收条件 |
 | 5. 拆解与领取 | 用 `to-pm` 从定稿拆出 Issue，在票内列出具体步骤（ticket） | 可先领取的编号、前置依赖、交付物与验收条件 |
-| 6. 实施与验收 | 单项软件工作用 `implement`，跨多张 Issue 的整份方案用 `implement-all`，正式材料用 `project-docs` | 成果、验证证据和仍待完成的条件 |
+| 6. 实施与验收 | 单项软件工作用 `implement`，跨多张 Issue 的整份方案用 `implement-all`，正式材料用 `project-docs`，演示稿可直接用 `ppt-creater` | 成果、验证证据和仍待完成的条件 |
 | 7. 反馈更新 | 用 `to-pm` 回写原票，勾选已验证的步骤，整项达标后结项 | 若结果改变范围或路线，用 `to-notion` 记回原方案，经 `simplify` 定稿后再调票 |
 
 需要核实技术事实时，可在相应步骤调用 `research`，将一手来源和结论交回当前任务。
@@ -24,12 +26,12 @@
 
 **交给 Agent 安装**时，在 Codex、WorkBuddy、DeepSeek Harness 等工具中打开业务项目，发送以下请求。
 
-> 请从 https://github.com/LloydS827/agent-workflow-skills 安装 v0.22 的全部技能到当前项目。按 README 选择本工具的目录，运行安装脚本，再用 --check 核对。保留已有的不同内容，完成后告诉我怎样调用。
+> 请从 https://github.com/LloydS827/agent-workflow-skills 安装 v0.23 的全部技能到当前项目。按 README 选择本工具的目录，运行安装脚本，再用 --check 核对。保留已有的不同内容，完成后告诉我怎样调用。
 
 **自行安装**需要 Git 和 Python 3。下面是 Codex 的安装命令，请将路径换成自己的业务项目。其他工具按表替换技能目录。
 
 ```sh
-git clone --branch v0.22 https://github.com/LloydS827/agent-workflow-skills.git
+git clone --branch v0.23 https://github.com/LloydS827/agent-workflow-skills.git
 cd agent-workflow-skills
 python3 scripts/install.py "/path/to/project/.agents/skills"
 python3 scripts/install.py "/path/to/project/.agents/skills" --check
@@ -56,14 +58,14 @@ Windows 可用 `py -3`。安装脚本会复制共享参考和上游许可，遇�
 
 [会议待办收集示例](examples/meeting-actions.md) · [完整工作流设计](docs/workflow.md)
 
-## 全部 26 项技能
+## 全部 27 项技能
 
 Codex 中的显示名与下表的英文调用名一致。输入 `$` 后选名称，或直接写 `$init-notion-project`。
 
 | 用途 | 技能与作用 |
 | --- | --- |
 | 需求与决策 | [grill-with-docs](skills/grill-with-docs/SKILL.md) 澄清需求并记录共识 · [grilling](skills/grilling/SKILL.md) 追问关键取舍 · [domain-modeling](skills/domain-modeling/SKILL.md) 维护术语和决策记录 · [wayfinder](skills/wayfinder/SKILL.md) 梳理跨会话的决策依赖 |
-| 项目与交付 | [init-notion-project](skills/init-notion-project/SKILL.md) 建项目主页 · [to-notion](skills/to-notion/SKILL.md) 写方案与结论 · [simplify](skills/simplify/SKILL.md) 删减范围并定稿 · [to-pm](skills/to-pm/SKILL.md) 拆票与回写 · [project-docs](skills/project-docs/SKILL.md) 制作和检查正式材料 |
+| 项目与交付 | [init-notion-project](skills/init-notion-project/SKILL.md) 建项目主页 · [to-notion](skills/to-notion/SKILL.md) 写方案与结论 · [simplify](skills/simplify/SKILL.md) 删减范围并定稿 · [to-pm](skills/to-pm/SKILL.md) 拆票与回写 · [project-docs](skills/project-docs/SKILL.md) 制作和检查正式材料 · [ppt-creater](skills/ppt-creater/SKILL.md) 规划、制作与修订可编辑演示稿 |
 | 实现与验证 | [implement](skills/implement/SKILL.md) 按交办范围实现软件 · [implement-all](skills/implement-all/SKILL.md) 按依赖组织整份规格的多任务实现 · [tdd](skills/tdd/SKILL.md) 用行为测试驱动实现 · [code-review](skills/code-review/SKILL.md) 按规范和需求审查变更 · [diagnosing-bugs](skills/diagnosing-bugs/SKILL.md) 诊断故障与性能退化 |
 | 调研与设计 | [research](skills/research/SKILL.md) 查一手来源，留下带引用的研究笔记 · [prototype](skills/prototype/SKILL.md) 用原型检验设计 · [codebase-design](skills/codebase-design/SKILL.md) 推敲模块边界 · [improve-codebase-architecture](skills/improve-codebase-architecture/SKILL.md) 寻找架构改进点 |
 | 协作与学习 | [triage](skills/triage/SKILL.md) 分类和核实待办请求 · [handoff](skills/handoff/SKILL.md) 交接会话 · [retro](skills/retro/SKILL.md) 复盘编码过程 · [teach](skills/teach/SKILL.md) 组织学习 · [paper-assistant](skills/paper-assistant/SKILL.md) 陪读论文、讨论难点并续写阅读笔记 |

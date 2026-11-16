@@ -13,6 +13,7 @@
 | 实现软件行为 | [implement](../skills/implement/SKILL.md) | 指定范围的实现、测试、代码审查与可回写原票的证据 |
 | 调查技术问题 | [research](../skills/research/SKILL.md) | 带一手来源的研究记录 |
 | 交付报告、汇报或预算 | [project-docs](../skills/project-docs/SKILL.md) | 外部读者可独立使用、按指定格式检查过的材料 |
+| 规划、制作或修订演示稿 | [ppt-creater](../skills/ppt-creater/SKILL.md) | 按受众与用途组织、经过内容和视觉检查的可编辑演示稿；只讨论大纲时交付对应草稿 |
 
 **补充入口与支撑技能**
 
