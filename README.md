@@ -1,8 +1,8 @@
-# Agent Workflow Skills · V0.23
+# Agent Workflow Skills · V0.24
 
-一套从需求讨论走到交付验收的研发工作流，可直接安装到团队项目。V0.23 收录 27 项技能，其中 8 项由团队自建，19 项源自 Matt Pocock。
+一套从需求讨论走到交付验收的研发工作流，可直接安装到团队项目。V0.24 收录 28 项技能，其中 9 项由团队自建，19 项源自 Matt Pocock。
 
-本版新增 [ppt-creater](skills/ppt-creater/SKILL.md)，从资料与受众出发完成演示稿的规划、叙事、视觉设计、可编辑制作和交付检查，也支持参考稿改版与手动编辑后的续改。
+本版新增 [paper-note](skills/paper-note/SKILL.md)，将论文共读记录、讨论和已有草稿整理或续写为正式阅读笔记，按存放处的 README 完成保存、索引与链接维护。通常接在 `paper-assistant` 之后，也可直接整理已有阅读记录。
 
 ## 主流程
 
@@ -26,12 +26,12 @@
 
 **交给 Agent 安装**时，在 Codex、WorkBuddy、DeepSeek Harness 等工具中打开业务项目，发送以下请求。
 
-> 请从 https://github.com/LloydS827/agent-workflow-skills 安装 v0.23 的全部技能到当前项目。按 README 选择本工具的目录，运行安装脚本，再用 --check 核对。保留已有的不同内容，完成后告诉我怎样调用。
+> 请从 https://github.com/LloydS827/agent-workflow-skills 安装 v0.24 的全部技能到当前项目。按 README 选择本工具的目录，运行安装脚本，再用 --check 核对。保留已有的不同内容，完成后告诉我怎样调用。
 
 **自行安装**需要 Git 和 Python 3。下面是 Codex 的安装命令，请将路径换成自己的业务项目。其他工具按表替换技能目录。
 
 ```sh
-git clone --branch v0.23 https://github.com/LloydS827/agent-workflow-skills.git
+git clone --branch v0.24 https://github.com/LloydS827/agent-workflow-skills.git
 cd agent-workflow-skills
 python3 scripts/install.py "/path/to/project/.agents/skills"
 python3 scripts/install.py "/path/to/project/.agents/skills" --check
@@ -58,7 +58,7 @@ Windows 可用 `py -3`。安装脚本会复制共享参考和上游许可，遇�
 
 [会议待办收集示例](examples/meeting-actions.md) · [完整工作流设计](docs/workflow.md)
 
-## 全部 27 项技能
+## 全部 28 项技能
 
 Codex 中的显示名与下表的英文调用名一致。输入 `$` 后选名称，或直接写 `$init-notion-project`。
 
@@ -68,7 +68,7 @@ Codex 中的显示名与下表的英文调用名一致。输入 `$` 后选名称
 | 项目与交付 | [init-notion-project](skills/init-notion-project/SKILL.md) 建项目主页 · [to-notion](skills/to-notion/SKILL.md) 写方案与结论 · [simplify](skills/simplify/SKILL.md) 删减范围并定稿 · [to-pm](skills/to-pm/SKILL.md) 拆票与回写 · [project-docs](skills/project-docs/SKILL.md) 制作和检查正式材料 · [ppt-creater](skills/ppt-creater/SKILL.md) 规划、制作与修订可编辑演示稿 |
 | 实现与验证 | [implement](skills/implement/SKILL.md) 按交办范围实现软件 · [implement-all](skills/implement-all/SKILL.md) 按依赖组织整份规格的多任务实现 · [tdd](skills/tdd/SKILL.md) 用行为测试驱动实现 · [code-review](skills/code-review/SKILL.md) 按规范和需求审查变更 · [diagnosing-bugs](skills/diagnosing-bugs/SKILL.md) 诊断故障与性能退化 |
 | 调研与设计 | [research](skills/research/SKILL.md) 查一手来源，留下带引用的研究笔记 · [prototype](skills/prototype/SKILL.md) 用原型检验设计 · [codebase-design](skills/codebase-design/SKILL.md) 推敲模块边界 · [improve-codebase-architecture](skills/improve-codebase-architecture/SKILL.md) 寻找架构改进点 |
-| 协作与学习 | [triage](skills/triage/SKILL.md) 分类和核实待办请求 · [handoff](skills/handoff/SKILL.md) 交接会话 · [retro](skills/retro/SKILL.md) 复盘编码过程 · [teach](skills/teach/SKILL.md) 组织学习 · [paper-assistant](skills/paper-assistant/SKILL.md) 陪读论文、讨论难点并续写阅读笔记 |
+| 协作与学习 | [triage](skills/triage/SKILL.md) 分类和核实待办请求 · [handoff](skills/handoff/SKILL.md) 交接会话 · [retro](skills/retro/SKILL.md) 复盘编码过程 · [teach](skills/teach/SKILL.md) 组织学习 · [paper-assistant](skills/paper-assistant/SKILL.md) 陪读论文、讨论难点并续写阅读笔记 · [paper-note](skills/paper-note/SKILL.md) 将共读记录整理或续写为正式笔记，完成归档 |
 | 配置与维护 | [skill-builder](skills/skill-builder/SKILL.md) 从经验或固定需求新建技能，试用并改进已有技能 · [setup-matt-pocock-skills](skills/setup-matt-pocock-skills/SKILL.md) 配置工程任务跟踪与领域文档 · [writing-for-agents](skills/writing-for-agents/SKILL.md) 编写技能与 Agent 指令 |
 
 [技能目录与产出](docs/skills.md) · [定制与贡献](CONTRIBUTING.md) · [来源与许可](SOURCES.md) · [验证记录](docs/validation.md)

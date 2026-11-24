@@ -24,6 +24,8 @@ to-notion 借鉴 to-spec 综合已有讨论的做法，to-pm 沿用 to-tickets �
 
 ## 后续修订
 
+V0.24 收录维护者新建的 [paper-note](skills/paper-note/SKILL.md)，团队自建技能增至 9 项，全库共 28 项。本次导入技能正文与调用配置共 2 个文件，按项目约定将 Codex 显示名统一为 `paper-note`。技能支持按任务自动选用，也可点名调用。它承接论文共读后的成稿、阶段性归档和已有笔记更新，保存位置、命名、索引及工具遵循本次请求和笔记存放处的 README。
+
 V0.23 收录维护者新建的 [ppt-creater](skills/ppt-creater/SKILL.md)，团队自建技能增至 8 项，全库共 27 项。本次导入入口、三份参考、调用配置和 PPTX 盘点脚本共 6 个文件，按项目约定将 Codex 显示名统一为 `ppt-creater`。技能支持按任务自动选用，也可点名调用；正式材料入口 `project-docs` 接入其演示稿流程。实际制作、渲染与图像生成能力由运行环境提供。
 
 V0.22 新增两项团队自建技能。[skill-builder](skills/skill-builder/SKILL.md) 来自团队修订及试用技能的实践；[paper-assistant](skills/paper-assistant/SKILL.md) 来自团队根据 Andrej Karpathy 阅读法整理的论文陪读流程。本版统一以英文调用名作为 Codex 显示名，并支持沿用已有 Notion 项目的版式与看板设置。
